@@ -1,0 +1,185 @@
+body{
+    padding: 2rem;
+    background-color: rgb(88, 86, 86);
+}
+*{
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: rgb(255, 248, 248);
+    font-family: Helvetica, sans-serif
+}
+.game-body{
+    display: flex;
+}
+
+section{
+    width: 300px;
+    height: 500px;
+    border: 2px green solid;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    background-color: #ffffff;
+}
+#police{
+    animation: myMove 3s infinite;
+    top: 500px;
+    position: relative;
+    left: 0;
+}
+
+@keyframes myMove {
+    0%  {top: 0px};
+    100% {top: 500px};   
+ }
+
+
+/* LANDING PAGE STYLING */
+.landing-page{
+    padding: 0.3rem 1rem;
+    background-color: rgba(203, 223, 235, 0.171);
+    border: 3px solid hwb(240 4% 51%);
+   
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+
+label{
+    font-size: 14px;
+}
+input{
+    background-color: rgb(112, 109, 109);
+    height: 20px;
+}
+select, option{
+    background-color: rgb(90, 87, 87);
+}
+
+.car{
+    display: flex;
+    justify-content: space-around ;
+    flex-wrap: wrap;
+}
+.car div{
+    text-align: center;
+    line-height: 1.4;
+}
+img{
+    height: 115px;
+    width: 75px;
+    display: block;
+}
+button{
+    background-color: hsl(0, 2%, 32%);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    position: relative;
+    
+}
+#start-game{
+    left: 90%;
+}
+footer{
+    display: flex;
+    margin-top: 12px;
+    
+}
+audio{
+    width: 48px;
+    height: 25px;
+}
+
+
+
+/* //PAD */
+.pad-box {
+    margin-top: 12px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.game-button {
+    background-color: rgb(236, 176, 63);
+    padding: 0.5rem 0.8rem;
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GAME PLAY GROUND STYLE */
+.play-ground{
+    width: 300px;
+    height: 500px;
+    border: 2px green solid;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+.police{
+    transform: rotate(180deg);
+}
+.suspect{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.police, .suspect{
+    width: 100px;
+    height: 100px;
+}
+
+/* //touch pad style */
+#leftTouch, #rightTouch{
+    width: 100px;
+    position: absolute;
+    height: 150px;
+    bottom: 0px;
+    cursor: pointer;
+}
+#rightTouch{
+    right: 0;
+}
+
+#play-again, #end{
+    background-color: rgb(245, 246, 250);
+    color: gray;
+    
+}
+#status-bar{
+    background-color: rgb(122, 132, 167);
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+    padding: 2rem; 
+}
+#status{
+    text-align: center;
+}
+.infomation{
+    background-color:rgb(122, 132, 167);
+    padding: 0.5rem;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;   
+}

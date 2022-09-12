@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Police Mission </title>
+
+    <!-- LINK TO CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="game.css"> -->
+</head>
+<body>
+    <div class="infomation">      
+            <p id="score"></p>
+            <p id="high-score"> High Score: </p>
+            <audio id="audio" src="audio/siren1.wav" controls autoplay loop></audio> 
+    </div>
+
+    <!-- <div class="game-body"> -->
+    <section id="landing-page" class="landing-page">
+        <header> 
+            <h1> Police Mission (PM) </h1>
+        </header>
+        <div class="details">
+            <label> Choose a Car: &nbsp; 
+                <select id="suspect-cars" >
+                    <option value="car1" selected>CAR 1</option>
+                    <option value="car2">CAR 2</option>
+                    <option value="car3">CAR 3</option>
+                    <option value="car4">CAR 4</option>
+                    <option value="car5">CAR 5</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div class="car">
+            <div> <img class="suspect-cars" src="images/car1.svg" alt=""> Car 1 </div>
+            <div> <img class="suspect-cars" src="images/car2.svg" alt=""> Car 2 </div>
+            <div> <img class="suspect-cars" src="images/car3.svg" alt=""> Car 3 </div>
+            <div> <img class="suspect-cars" src="images/car4.svg" alt=""> Car 4 </div>
+            <div> <img class="suspect-cars" src="images/car5.svg" alt=""> Car 5 </div>
+        </div>
+        <footer>
+            <!-- <div class="sound">
+                <audio src="audio/siren1.wav" controls loop></audio> 
+                <span style="font-size: 16px; "> Sound </span>
+            </div> -->
+            <a> <button id="start-game"> Start Game </button> </a>     
+        </footer>
+
+    </section>
+
+    
+    <section id="play-ground" class="play-ground">
+       
+        <div> <img id="police" class="police" src="images/police.svg" alt=""> </div>
+      
+        <!-- <div> <img class="suspect" src="images/car5.svg" alt=""> </div> -->
+        <div> <img class="suspect" src="images/car1.svg" alt=""> </div>
+        <div> <img class="suspect" src="images/car2.svg" alt=""> </div>
+        <div> <img class="suspect" src="images/car3.svg" alt=""> </div>
+        <div> <img class="suspect" src="images/car4.svg" alt=""> </div>
+        <div> <img class="suspect" src="images/car5.svg" alt=""> </div>
+        <div id="status-bar">
+            <p id="status"> </p>
+            <!-- <button id="play-again"> Play Again </button>    -->
+            <button id="end"> Click Here! To Play Again </button>   
+        </div>
+         
+       
+        
+        
+        <!-- //touchpad -->
+        <div id="leftTouch"> </div>
+        <div id="rightTouch"> </div>
+    </section>
+
+    <!-- </div> -->
+    <script src="game.js"></script>
+    <!-- <script src="testing.js"></script> -->
+</body>
+</html>
