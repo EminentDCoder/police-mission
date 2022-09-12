@@ -33,14 +33,15 @@ setInterval(chooseCar, 1);
 
 
 //MOVING THE THEIF CAR LEFT AND RIGHT
+var suspectMove = 0;
 function leftMove(){
-    var suspectMove = parseInt(window.getComputedStyle(suspects[index]).getPropertyValue("left"));
+    suspectMove = parseInt(window.getComputedStyle(suspects[index]).getPropertyValue("left"));
     suspectMove -=100;
-    if(suspectMove>=0){
+    if(suspectMove >= 0){
         suspects[index].style.left = suspectMove + "px";
     }
 }
-var suspectMove = 0;
+
 function rightMove(){
     suspectMove = parseInt(window.getComputedStyle(suspects[index]).getPropertyValue("left"));
     suspectMove +=100;
@@ -76,6 +77,7 @@ function over(){
     var policeTop = parseInt(window.getComputedStyle(police).getPropertyValue("top"));
     if(policeCar == suspectMove && policeTop < 500 && policeTop > 300){
        police.style.position = "initial";
+       police.style.animation = "none";
        clearInterval(markInterval);   
        statusBar.style.display = "initial";
        var status = document.getElementById("status");
@@ -87,7 +89,7 @@ function over(){
        }
     }
 }
-setInterval(over, 1);
+setInterval(over, );
 
 //MARK AWARDING FUNCTION
 var mark = 0;
@@ -126,12 +128,18 @@ startGame.onclick = startFunc;
 var landingPage = document.getElementById("landing-page");
 var playGround = document.getElementById("play-ground");
 playGround.style.display ="none";
-landingPage.style.display =" ";
 
 //TRY AGAIN AND END FUNCTION
 function reLoad(){   
     window.location.reload();
-    index = 0;
 }
 var end = document.getElementById("end");
 end.onclick = reLoad;
+
+//RESET HIGH SCORES
+function resetFunc(){
+    localStorage.clear();
+    location.reload();
+}
+var reset = document.getElementById("reset");
+reset.onclick = resetFunc;
